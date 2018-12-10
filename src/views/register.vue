@@ -17,13 +17,14 @@
     </article>
     <section>
       <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px">
-        <el-form-item label="邮箱" prop="email">
+        <el-form-item label="手机号" prop="email">
           <el-input v-model="ruleForm.email" autocomplete="off"></el-input>
         </el-form-item>
       </el-form>
       <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px">
-        <el-form-item label="验证码" prop="code">
-          <el-input type="password" v-model="ruleForm.code" autocomplete="off"></el-input>
+        <el-form-item class="code" label="短信验证码" prop="code">
+          <el-input class="codeinput" type="password" v-model="ruleForm.code" autocomplete="off"></el-input>
+          <el-button class="codeButton" type="primary" @click="submitForm('ruleForm')">发送验证码</el-button>
         </el-form-item>
       </el-form>
       <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px">
@@ -139,5 +140,9 @@
     min-height: 300px;
     padding-right: 550px;
     box-sizing: border-box;
+    .codeinput {
+      margin-right: 20px;
+      width: 30%;
+    }
   }
 </style>
