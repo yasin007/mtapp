@@ -11,7 +11,9 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/html-self-closing': "off",
-    'indent': 'off'
+    'indent': 'off',
+    'space-before-function-paren': 'off',
+    'spaced-comment': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
