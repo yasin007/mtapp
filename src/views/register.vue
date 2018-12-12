@@ -7,11 +7,11 @@
           class="site-logo"/>
         <span class="login">
           <em class="bold">已有美团账号？</em>
-          <a href="/login">
+          <router-link to="/login">
             <el-button
               type="primary"
               size="small">登录</el-button>
-          </a>
+          </router-link>
         </span>
       </header>
     </article>
@@ -37,7 +37,7 @@
           <el-input type="password" v-model="ruleForm.cpwd" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">同意一下协议并注册</el-button>
+          <el-button type="primary" @click="submitForm('ruleForm')">注册并登陆</el-button>
         </el-form-item>
       </el-form>
     </section>
@@ -141,8 +141,11 @@
     padding-right: 550px;
     box-sizing: border-box;
     .codeinput {
-      margin-right: 20px;
-      width: 30%;
+      margin-right: 5px;
+      width: 170px;
+    }
+    .codeButton {
+      float: right;
     }
   }
 </style>
