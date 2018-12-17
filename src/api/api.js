@@ -17,3 +17,12 @@ export const register = parmas => {
 export const getMessage = parmas => {
   return axios.post(`${host}/codes/`, parmas)
 }
+
+//获取商品类别信息
+export const getCategory = params => {
+  if ('id' in params) {
+    return axios.get(`${host}/categorys/` + params.id + '/')
+  } else {
+    return axios.get(`${host}/categorys/`, params)
+  }
+}

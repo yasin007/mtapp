@@ -40,7 +40,6 @@
         background-position: -669px -748px;
         background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
       }
-
       .login {
         float: right;
         line-height: 36px;

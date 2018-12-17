@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import {getMessage} from '../api/api'
+  import {getMessage} from '../../api/api'
 
   export default {
     data() {

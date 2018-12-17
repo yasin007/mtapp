@@ -13,7 +13,8 @@ module.exports = {
     'vue/html-self-closing': "off",
     'indent': 'off',
     'space-before-function-paren': 'off',
-    'spaced-comment': 'off'
+    'spaced-comment': 'off',
+    'object-curly-spacing': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
