@@ -1,22 +1,24 @@
 <template>
   <div class="m-user">
-    <template v-if="user">
-      欢迎您,<span class="user-name">{{ user }}</span>
+    <template v-if="userInfo.name">
+      欢迎您,<span class="user-name">{{userInfo.name}}</span>
       <router-link to="/exit">退出</router-link>
     </template>
     <template v-else>
-      <router-link class="login" to="/logo">立即登录</router-link>
-      <router-link class="register" to="/register">注册</router-link>
+      <router-link class="login" to="/app/logo">立即登录</router-link>
+      <router-link class="register" to="/app/register">注册</router-link>
     </template>
   </div>
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+
   export default {
-    data () {
-      return {
-        user: ''
-      }
+    computed: {
+      ...mapGetters({
+        userInfo: 'userInfo'
+      })
     }
   }
 </script>

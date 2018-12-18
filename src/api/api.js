@@ -26,3 +26,8 @@ export const getCategory = params => {
     return axios.get(`${host}/categorys/`, params)
   }
 }
+
+//获取轮播图
+export const bannerGoods = params => {
+  return axios.get(`${host}/banners/`)
+}

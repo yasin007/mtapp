@@ -8,9 +8,10 @@ import Home from './views/home/home.vue'
 import Header from './views/header/header.vue'
 import Footer from './views/footer/footer.vue'
 
-Vue.use(Router)
+//全局状态控制引入
 
-export default new Router({
+Vue.use(Router)
+var router = new Router({
   routes: [
     {
       path: '/app',
@@ -45,3 +46,6 @@ export default new Router({
     }
   ]
 })
+
+//抛出路由
+export default router
