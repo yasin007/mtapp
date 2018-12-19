@@ -21,10 +21,10 @@
         <el-input
           v-model="username"
           maxlength="11"
-          prefix-icon="profile"/>
+          placeholder="请输入手机号"/>
         <el-input
           v-model="password"
-          prefix-icon="password"
+          placeholder="请输入密码"
           type="password"/>
         <div class="foot">
           <el-checkbox v-model="checked">7天内自动登录</el-checkbox>
@@ -36,6 +36,10 @@
           size="mini"
           @click="login">登录
         </el-button>
+        <span>
+          <label>还没有账号?</label>
+          <a @click="toRegister">免费注册</a>
+        </span>
       </div>
     </div>
   </div>
@@ -43,6 +47,7 @@
 
 <script>
   import {login} from '../../api/api'
+  import cookie from '../../static/js/cookie'
 
   export default {
     data: () => {
@@ -54,19 +59,21 @@
       }
     },
     methods: {
+      toRegister: function () {
+        this.$router.push({name: 'register'})
+      },
       login: function () {
         let self = this
         login({
           username: self.username,
           password: self.password
         }).then((response) => {
-          console.log(response)
-          // //本地存储用户信息
-          // cookie.setCookie('name', this.userName, 7)
-          // cookie.setCookie('token', response.data.token, 7)
-          // //存储在store
-          // // 更新store数据
-          // that.$store.dispatch('setInfo')
+          //本地存储用户信息
+          cookie.setCookie('name', this.username, 7)
+          cookie.setCookie('token', response.data.token, 7)
+          //存储在store
+          // 更新store数据
+          self.$store.dispatch('setInfo')
           //跳转到首页页面
           self.$router.push({name: 'home'})
         }).catch(function (error) {

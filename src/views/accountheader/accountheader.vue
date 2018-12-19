@@ -6,7 +6,7 @@
         class="site-logo"/>
       <span class="login">
           <em class="bold">已有美团账号？</em>
-        <router-link to="/app/login"> <el-button
+        <router-link to="/users/login"> <el-button
           type="primary"
           size="small">登录</el-button></router-link>
         </span>
