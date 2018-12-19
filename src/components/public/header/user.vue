@@ -5,7 +5,7 @@
       <a @click="loginOut">退出</a>
     </template>
     <template v-else>
-      <router-link class="login" to="/users/logo">立即登录</router-link>
+      <router-link class="login" to="/users/login">立即登录</router-link>
       <router-link class="register" to="/users/register">注册</router-link>
     </template>
   </div>

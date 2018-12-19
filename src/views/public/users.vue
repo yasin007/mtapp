@@ -22,11 +22,10 @@
     sans-serif !important;
   }
 
-  .el-header, .el-main{
-    width: 1190px;
+  .el-header, .el-main {
+    min-width: 1190px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
     overflow: unset;
-    font-size: 12px;
   }
 </style>

@@ -2,7 +2,7 @@
   <div class="page-login">
     <div class="login-header">
       <a
-        href="/"
+        href="/rere"
         class="logo"/>
     </div>
     <div class="login-panel">
@@ -38,7 +38,7 @@
         </el-button>
         <span>
           <label>还没有账号?</label>
-          <a @click="toRegister">免费注册</a>
+          <router-link class="toRegister" to="/users/register">免费注册</router-link>
         </span>
       </div>
     </div>
@@ -68,11 +68,8 @@
           username: self.username,
           password: self.password
         }).then((response) => {
-          //本地存储用户信息
           cookie.setCookie('name', this.username, 7)
           cookie.setCookie('token', response.data.token, 7)
-          //存储在store
-          // 更新store数据
           self.$store.dispatch('setInfo')
           //跳转到首页页面
           self.$router.push({name: 'home'})
@@ -105,6 +102,7 @@
 </script>
 <style lang="scss">
   .page-login {
+    color: black;
     .login-header {
       position: relative;
       width: 980px;
@@ -168,6 +166,7 @@
         margin-top: 10px;
         b {
           float: right;
+          color: #2bb8aa;
         }
       }
 
@@ -202,6 +201,10 @@
         background-color: #2db3a6;
         border: none;
         padding: 12px 15px;
+      }
+      .toRegister {
+        margin-left: 5px;
+        color: #2bb8aa;
       }
     }
   }
