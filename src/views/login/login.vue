@@ -14,9 +14,6 @@
           alt="美团网">
       </div>
       <div class="form">
-        <h4
-          v-if="error"
-          class="tips"><i/>{{ error }}</h4>
         <p><span>账号登录</span></p>
         <el-input
           v-model="username"
@@ -52,10 +49,9 @@
   export default {
     data: () => {
       return {
-        checked: '',
+        checked: true,
         username: '',
-        password: '',
-        error: ''
+        password: ''
       }
     },
     methods: {
@@ -102,12 +98,12 @@
 </script>
 <style lang="scss">
   .page-login {
-    color: black;
+    font-size: 12px;
     .login-header {
       position: relative;
       width: 980px;
       height: auto;
-      margin: 40px auto 30px;
+      left: 115px;
       .logo {
         background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-retina.b95a7dd.png);
         background-position: 0 !important;
@@ -128,34 +124,6 @@
         display: flex;
         flex-direction: column;
         width: 270px;
-        .tips {
-          margin-bottom: 10px;
-          padding: 10px;
-          border: 1px solid #f5d8a7;
-          border-radius: 2px;
-          background: #fff6db;
-          font-size: 12px;
-          padding-left: 26px;
-          > i {
-            position: relative;
-            &:after {
-              position: absolute;
-              display: inline-block;
-              width: 17px;
-              height: 17px;
-              font-family: iconfont;
-              font-style: normal;
-              content: "\e64d";
-              font-size: 28px;
-              top: -9px;
-              left: -24px;
-            }
-          }
-        }
-        em {
-          font-style: normal;
-          float: right;
-        }
       }
 
       .el-input {
@@ -167,6 +135,7 @@
         b {
           float: right;
           color: #2bb8aa;
+          font-size: 12px;
         }
       }
 

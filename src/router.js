@@ -8,7 +8,7 @@ import Login from './views/login/login.vue'
 import Home from './views/home/home.vue'
 import Header from './views/header/header.vue'
 import Footer from './views/footer/footer.vue'
-
+import AccountFotter from './components/public/footer/accountfooter'
 //全局状态控制引入
 Vue.use(Router)
 var router = new Router({
@@ -37,14 +37,16 @@ var router = new Router({
           name: 'register',
           components: {
             head: Accountheader,
-            content: Register
+            content: Register,
+            footer: AccountFotter
           }
         },
         {
           path: 'login',
           name: 'login',
           components: {
-            content: Login
+            content: Login,
+            footer: AccountFotter
           }
         }
       ]

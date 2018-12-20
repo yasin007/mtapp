@@ -6,6 +6,9 @@
     <el-main>
       <router-view name='content'></router-view>
     </el-main>
+    <el-footer height="100%">
+      <router-view name="footer"></router-view>
+    </el-footer>
   </el-container>
 </template>
 <script>
@@ -20,12 +23,18 @@
     "Helvetica Neue",
     "MIcrosoft YaHei",
     sans-serif !important;
-  }
-
-  .el-header, .el-main {
-    min-width: 1190px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0px;
-    overflow: unset;
+    margin: 0px;
+    .el-header, .el-main, .el-footer {
+      min-width: 1190px;
+      padding: 0px;
+      overflow: unset;
+    }
+    .el-footer {
+      text-align: center;
+      border-top: 2px solid rgb(238, 238, 238);
+
+    }
   }
 </style>

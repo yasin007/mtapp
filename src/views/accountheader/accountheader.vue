@@ -23,7 +23,6 @@
     border-bottom: 2px solid #2bb8aa;
     min-width: 980px;
     color: #666;
-
     header {
       margin: 0 auto;
       padding: 10px 0;
