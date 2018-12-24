@@ -129,7 +129,7 @@
               self.statusMsg = self.time + '秒后'
               if (self.time < 0) {
                 self.statusMsg = '重新发送'
-                self.time = 10
+                self.time = 60
                 self.isDisabled = false
                 window.clearInterval(interval)
               }

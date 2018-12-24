@@ -28,4 +28,9 @@
 </script>
 
 <style lang="scss">
+  .page-index{
+    width: 1190px !important;
+    z-index: 9;
+    margin: 0px auto;
+  }
 </style>

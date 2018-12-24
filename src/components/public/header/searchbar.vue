@@ -22,34 +22,19 @@
         </div>
         <ul class="nav">
           <li>
-            <nuxt-link
-              to="/"
-              class="takeout">美团外卖
-            </nuxt-link>
+            <router-link class="takeout" to="/user/login">美团外卖</router-link>
           </li>
           <li>
-            <nuxt-link
-              to="/"
-              class="movie">猫眼电影
-            </nuxt-link>
+            <router-link class="movie" to="/user/login">猫眼电影</router-link>
           </li>
           <li>
-            <nuxt-link
-              to="/"
-              class="hotel">美团酒店
-            </nuxt-link>
+            <router-link class="business" to="/user/login">美团酒店</router-link>
           </li>
           <li>
-            <nuxt-link
-              to="/"
-              class="apartment">民宿/公寓
-            </nuxt-link>
+            <router-link class="business" to="/user/login">宿/公寓</router-link>
           </li>
           <li>
-            <nuxt-link
-              to="/"
-              class="business">商家入驻
-            </nuxt-link>
+            <router-link class="business" to="/user/login">商家入驻</router-link>
           </li>
         </ul>
       </el-col>
@@ -73,20 +58,17 @@
 </script>
 
 <style lang="scss">
-  .search-panel {
-    background-color: red;
-    width: 100%;
-  }
   .m-header-searchbar {
     width: 1190px;
     height: 157px;
-    padding: 20px 20px;
+    margin: 0px auto;
     background: #fff;
     align-items: start;
     box-sizing: border-box;
     .left {
       width: 280px;
       padding-top: 15px;
+      padding-left: 15px;
       img {
         width: 126px;
         height: 46px;
@@ -128,14 +110,12 @@
         list-style: none;
         display: flex;
         margin-top: 25px;
-
         li {
           font-weight: 700;
           font-size: 16px;
           margin: 0 20px;
           cursor: pointer;
           position: relative;
-
           a {
             color: #222;
 
@@ -196,7 +176,6 @@
             content: '\e65e';
           }
         }
-
         .txt {
           color: #999;
           font-size: 12px;

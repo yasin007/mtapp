@@ -29,6 +29,6 @@
     height: 40px;
     line-height: 40px;
     z-index: 9;
-    background-color: #f8f8f8;
+    margin: 0px auto;
   }
 </style>

@@ -25,10 +25,7 @@
       loginOut() {
         cookie.delCookie('token')
         cookie.delCookie('name')
-        //重新触发store
-        //更新store数据
         this.$store.dispatch('setInfo')
-        //跳转到登录
         this.$router.push({name: 'login'})
       }
     }
@@ -37,8 +34,12 @@
 
 <style lang="scss">
   .m-user {
-    .username {
+    font-size: 12px;
+    .user-name {
       color: #31BBAC;
+      margin-right: 10px;
+    }
+    a {
       cursor: pointer;
     }
     .login,

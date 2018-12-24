@@ -4,7 +4,7 @@
       <el-carousel-item
         v-for="item in banners"
         :key="item.image">
-        <img :src="item.image">
+        <img class="image" :src="item.image">
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -36,3 +36,16 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .slide {
+    .image {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+</style>

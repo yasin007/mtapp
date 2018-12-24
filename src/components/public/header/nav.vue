@@ -2,7 +2,7 @@
   <div class="m-nav">
     <ul class="nav">
       <li class="list">
-        <nuxt-link to="/my"><span class="title">我的美团</span></nuxt-link>
+        <span class="title">我的美团</span>
         <dl>
           <dd>
             <router-link :to="'/app/login'">我的订单</router-link>
@@ -30,6 +30,7 @@
     padding: 0;
     z-index: 999;
     height: 40px;
+    margin-right: 50px;
     text-align: center;
     font-size: 12px;
     color: darkgray;

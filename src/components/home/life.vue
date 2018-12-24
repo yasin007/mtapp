@@ -2,7 +2,7 @@
   <div class="m-life">
     <el-row>
       <el-col :span="14">
-        <slider/>
+        <slider class="slider-warpper"></slider>
       </el-col>
       <el-col :span="4">
         <div class="m-life-pic"/>
@@ -66,6 +66,9 @@
 </script>
 <style lang="scss">
   .m-life {
+    .slider-warpper {
+      margin: 10px 10px 10px 10px;
+    }
     .m-life-pic {
       margin: 10px 10px 10px 0;
       width: 150px;
