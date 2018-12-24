@@ -10,6 +10,7 @@
     </el-row>
     <el-row>
       <el-col :span="24">
+        <artistic/>
       </el-col>
     </el-row>
   </div>
@@ -18,17 +19,19 @@
 <script>
   import Emenu from '@/components/home/menu'
   import Life from '@/components/home/life.vue'
+  import Artistic from '@/components/home/artistic.vue'
 
   export default {
     components: {
       Emenu,
-      Life
+      Life,
+      Artistic
     }
   }
 </script>
 
 <style lang="scss">
-  .page-index{
+  .page-index {
     width: 1190px !important;
     z-index: 9;
     margin: 0px auto;

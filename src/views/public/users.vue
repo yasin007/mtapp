@@ -1,5 +1,5 @@
 <template>
-  <el-container class="layout-default">
+  <el-container class="users-layout-default">
     <el-header>
       <router-view name="head"></router-view>
     </el-header>
@@ -15,7 +15,7 @@
 
 </script>
 <style lang='scss'>
-  .layout-default {
+  .users-layout-default {
     -webkit-font-smoothing: antialiased;
     font-family: "-apple-system",
     BlinkMacSystemFont,
