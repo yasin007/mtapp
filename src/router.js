@@ -8,7 +8,9 @@ import Login from './views/login/login.vue'
 import Home from './views/home/home.vue'
 import Header from './views/header/header.vue'
 import Footer from './views/footer/footer.vue'
+import List from './views/list/list'
 import AccountFotter from './components/public/footer/accountfooter'
+
 //全局状态控制引入
 Vue.use(Router)
 var router = new Router({
@@ -23,6 +25,15 @@ var router = new Router({
           components: {
             head: Header,
             content: Home,
+            footer: Footer
+          }
+        },
+        {
+          path: 'list/:id',
+          name: 'list',
+          components: {
+            head: Header,
+            content: List,
             footer: Footer
           }
         }

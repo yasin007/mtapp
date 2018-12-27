@@ -12,7 +12,7 @@
   </el-container>
 </template>
 <script>
-
+  export default {}
 </script>
 <style lang='scss'>
   .users-layout-default {

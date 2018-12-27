@@ -18,6 +18,11 @@ export const getMessage = parmas => {
   return axios.post(`${host}/codes/`, parmas)
 }
 
+//获取商品列表
+export const getGoods = params => {
+  return axios.get(`${host}/goods/`, {params: params})
+}
+
 //获取商品类别信息
 export const getCategory = params => {
   if ('id' in params) {
