@@ -40,7 +40,6 @@
     },
     methods: {
       getOpro: async function (e) {
-
         if (e) {
           let dom = e.target
           let tag = dom.tagName.toLowerCase()

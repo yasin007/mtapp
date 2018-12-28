@@ -13,6 +13,7 @@
 <script>
   import Crumbs from '@/components/list/crumbs.vue'
   import Categroy from '@/components/list/categroy.vue'
+  // import {getCategory} from '../../api/api'
 
   export default {
     components: {
@@ -23,7 +24,8 @@
       return {
         types: []
       }
-    }
+    },
+    methods: {}
   }
 </script>
 
